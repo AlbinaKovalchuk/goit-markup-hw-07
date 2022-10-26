@@ -1,0 +1,52 @@
+.benefits {
+    gap: 30px;
+}
+.benefits-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--secondary-text-color);
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.benefits-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.benefits-item {
+    width: 270px;
+    &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    }
+}
+
+.icon-detail::before {
+    background-image: url(../images/icon/antenna.svg);
+}
+
+.icon-punctuality::before {
+    background-image: url(../images/icon/clock.svg);
+}
+
+.icon-time::before {
+    background-image: url(../images/icon/diagram.svg);
+}
+
+.icon-tech::before {
+    background-image: url(../images/icon/astronaut.svg);
+}
+
+
+

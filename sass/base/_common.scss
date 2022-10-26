@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400px;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+
+.link {
+    display: flex;
+    text-decoration: none;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    text-align: center;
+}

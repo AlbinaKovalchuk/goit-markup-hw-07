@@ -1,0 +1,30 @@
+.soc {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
+//  .soc-link { fill: currentColor;} передаем колір через fill от item  до link 
+
+.soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: color var(--timing-function), background-color var(--timing-function);
+  fill: currentColor;
+  &:hover,
+  &:focus {
+    /*  підсв на білом синім   */
+    background-color: var(--acсent-backgroud);
+    color: var(--accent-text);
+  }
+}
+
+.soc-item {
+    color: var(--accent-text);
+}

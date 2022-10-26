@@ -1,0 +1,227 @@
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--timing-function), visibility var(--timing-function);
+}
+
+/*  кінцевий стан модалки  */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+  background: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scaleY(1) rotate(0deg);
+  transition: transform 250ms linear;
+}
+
+/*  початковий стан модалки захований backdrop-ом   */
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0) rotate(90deg);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.form {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background: var(--accent-text);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--primary-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-close {
+  transition: fill var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--acсent-backgroud);
+  }
+}
+
+/* заголовок модального вікна */
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  margin-bottom: 12px;
+}
+
+.form-container {
+  position: relative;
+}
+
+/* заголовок-назви для поля вводу */
+.form-title-fild {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border var(--timing-function);
+  cursor: pointer;
+  &:hover {
+    border-color: var(--acсent-backgroud);
+  }
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  transition: fill var(--timing-function);
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: transparent;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--timing-function);
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:hover {
+    border-color: var(--acсent-backgroud);
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+/* .form-input:focus ~ .icon
+{   fill: var(--acсent-backgroud);
+    border-color: var(--acсent-backgroud);
+} */
+
+.form-container:focus-within > .icon {
+  fill: var(--acсent-backgroud);
+  border-color: var(--acсent-backgroud);
+}
+
+.form-button {
+  display: block;
+  margin: 0px auto;
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 10px 52px;
+  color: var(--accent-text);
+  border-color: #188ce8;
+  border: none;
+  background: #188ce8;
+  transition: box-shadow var(--timing-function);
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* .visually-hidden  скрывает встроеный чек*/
+// .check-inp {
+//   position: absolute;
+//   white-space: nowrap;
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   margin: -1px;
+// }
+
+.check-icon {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.check-inp:checked + .check-icon {
+  border: var(--acсent-backgroud);
+  background-color: var(--acсent-backgroud);
+  background-image: url(../images/iconcheck.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.dogovor-accent {
+  color: var(--acсent-backgroud);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
