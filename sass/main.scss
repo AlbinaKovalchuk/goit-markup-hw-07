@@ -1,6 +1,9 @@
 
 @import "./utils/variables";
 @import "./utils/hidden";
+@import "./utils/mixin";
+// @import "./utils/animation";
+
 
 @import "./base/reset";
 @import "./base/title";
@@ -18,3 +21,4 @@
 @import "./layouts/team";
 @import "./layouts/client";
 @import "./layouts/footer";
+@import "./layouts/portfolio";

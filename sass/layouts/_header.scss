@@ -3,18 +3,18 @@
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
+  outline: 5px solid teal
 }
 
 /* короб для лого та кроба с навигацией та контактами */
-.container-header {
-  display: flex;
-  align-items: center;
+.header__container {
+  @include align-center ();
+  outline: 2px solid tomato
 }
 
 /* короб для ссылок с навигацией по сайту  */
-.nav-sait {
-  display: flex;
-  align-items: center;
+.navigation{
+  @include align-center ();
 }
 
 /* короб для телеф та емайла */
@@ -25,10 +25,8 @@
 /*  элементы навигации по сайту /сайт портфолио контакты */
 .nav {
   gap: 50px;
-  font-weight: 500;
-  line-height: 1.14;
+  @include font(500, 14px,1.14,0.02em);
   color: var(--secondary-text-color);
-  letter-spacing: 0.02em;
 }
 
 .nav-link {
@@ -55,10 +53,7 @@
 
 /* ========== номера телефона и емайла====== */
 .conect {
-  justify-content: baseline;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(500, 14px,1.14,0.02em);
   color: var(--primary-text-color);
   fill: currentColor;
   transition: color var(--timing-function);

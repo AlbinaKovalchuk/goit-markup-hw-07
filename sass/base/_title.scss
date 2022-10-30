@@ -1,15 +1,32 @@
-// для заголовків  секцій H2
+
+// для заголовків секцій  H2
 .about-title,
 .team-title,
 .client-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
+  @include font(700,36px,1.16,0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   margin-bottom: 50px;
+  }
+
+
+
+// для заголовків   H3  
+.add-title,
+.subscribe-title,
+.benefits-title {
+  @include font(700,14px,1.14,0.03em);
+  text-transform: uppercase;
 }
 
+.add-title,
+.subscribe-title{ 
+  color: var(--accent-text);
+  margin-bottom: 20px;
+}
 
+.benefits-title {
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+  }
 
