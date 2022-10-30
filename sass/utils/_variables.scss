@@ -4,9 +4,7 @@
     /* колір текста для заголовок #212121 */
     --primary-text-color: #757575;
     --secondary-text-color: #212121;
-    /* акцентный колір фону #2196F3*/
-    /* акцентный колір тексту #FFFFFF*/
-    --acсent-backgroud: #2196F3;
+    --accent-backgroud:#2196F3;
     --accent-text: #FFFFFF;
     /* колір фона основний  #FFFFFF */
     /* колір фона для Hero та footer #2F303A*/
@@ -15,7 +13,7 @@
     --secondary-background-color: #2F303A;
 }
 .current {
-    /* --acсent-backgroud: #2196F3; синий */
-    color: var(--acсent-backgroud);
+    /* --accent-backgroud: #2196F3; синий */
+    color: var(--accent-backgroud);
 }
 

@@ -10,7 +10,7 @@
     background-size: cover;
 }
 
-.hero-title {
+.hero__title {
     @include font(900, 44px,1.36,0.06em);
     width: 696px;
     color: var(--primary-background-color);
@@ -19,12 +19,12 @@
     margin-bottom: 30px;
 }
 
-.hero-button {
+.hero__button {
     width: 216px;
     @include font(700,14px,1.87,0.06em);
     color: var(--accent-text);
-    background: var(--acсent-backgroud);
+    background: var(--accent-backgroud);
     border-radius: 4px;
-    border-color: var(--acсent-backgroud);
+    border-color: var(--accent-backgroud);
     padding: 10px 32px;
 }

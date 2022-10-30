@@ -65,7 +65,7 @@
   transition: fill var(--timing-function);
   &:hover,
   &:focus {
-    fill: var(--acсent-backgroud);
+    fill: var(--accent-backgroud);
   }
 }
 
@@ -98,9 +98,17 @@
   transition: border var(--timing-function);
   cursor: pointer;
   &:hover {
-    border-color: var(--acсent-backgroud);
+    border-color: var(--accent-backgroud);
+   fill: var(--accent-backgroud); 
   }
-}
+ }
+
+/* .form-input:focus ~ .icon
+{   fill: var(--acсent-backgroud);
+    border-color: var(--acсent-backgroud);
+} */
+
+
 
 .form-label {
   display: flex;
@@ -125,7 +133,7 @@
      color: rgba(117, 117, 117, 0.5);
   }
   &:hover {
-    border-color: var(--acсent-backgroud);
+    border-color: var(--accent-backgroud);
   }
 }
 
@@ -134,16 +142,13 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  .form-container:focus-within > & {
-    fill: var(--acсent-backgroud);
-    border-color: var(--acсent-backgroud);
-  }
+   
 }
 
-/* .form-input:focus ~ .icon
-{   fill: var(--acсent-backgroud);
-    border-color: var(--acсent-backgroud);
-} */
+.form-container:focus-within > .icon {
+    fill: var(--accent-backgroud);
+    border-color: var(--accent-backgroud);
+  }
 
 .form-button {
   display: block;
@@ -181,8 +186,8 @@
   border-radius: 2px;
   margin-right: 7px;
   .check-inp:checked + & {
-    border: var(--acсent-backgroud);
-    background-color: var(--acсent-backgroud);
+    border: var(--accent-backgroud);
+    background-color: var(--accent-backgroud);
     background-image: url(../images/iconcheck.svg);
     background-size: contain;
     background-origin: border-box;
@@ -190,7 +195,7 @@
 }
 
 .dogovor-accent {
-  color: var(--acсent-backgroud);
+  color: var(--accent-backgroud);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

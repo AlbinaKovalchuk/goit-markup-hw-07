@@ -5,9 +5,7 @@
   /* колір текста для заголовок #212121 */
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
-  /* акцентный колір фону #2196F3*/
-  /* акцентный колір тексту #FFFFFF*/
-  --acсent-backgroud: #2196F3;
+  --accent-backgroud:#2196F3;
   --accent-text: #FFFFFF;
   /* колір фона основний  #FFFFFF */
   /* колір фона для Hero та footer #2F303A*/
@@ -17,8 +15,8 @@
 }
 
 .current {
-  /* --acсent-backgroud: #2196F3; синий */
-  color: var(--acсent-backgroud);
+  /* --accent-backgroud: #2196F3; синий */
+  color: var(--accent-backgroud);
 }
 
 /*--- заховати заголовок та інще--- */
@@ -80,25 +78,13 @@ img {
   margin-bottom: 50px;
 }
 
-.add-title,
-.subscribe-title,
-.benefits-title {
+.add__title,
+.subscribe-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.add-title,
-.subscribe-title {
-  color: var(--accent-text);
-  margin-bottom: 20px;
-}
-
-.benefits-title {
-  color: var(--secondary-text-color);
-  margin-bottom: 10px;
 }
 
 body {
@@ -133,6 +119,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  outline: 2px solid red;
 }
 
 .btn-container {
@@ -155,12 +142,8 @@ body {
   color: var(--secondary-text-color);
 }
 
-.logo-accent {
-  color: var(--acсent-backgroud);
-}
-
-.logo.link {
-  margin-right: 93px;
+.logo__accent {
+  color: var(--accent-backgroud);
 }
 
 .soc {
@@ -183,7 +166,7 @@ body {
 }
 .soc-link:hover, .soc-link:focus {
   /*  підсв на білом синім   */
-  background-color: var(--acсent-backgroud);
+  background-color: var(--accent-backgroud);
   color: var(--accent-text);
 }
 
@@ -257,7 +240,7 @@ body {
   transition: fill var(--timing-function);
 }
 .icon-close:hover, .icon-close:focus {
-  fill: var(--acсent-backgroud);
+  fill: var(--accent-backgroud);
 }
 
 /* заголовок модального вікна */
@@ -296,9 +279,14 @@ body {
   cursor: pointer;
 }
 .form-input:hover {
-  border-color: var(--acсent-backgroud);
+  border-color: var(--accent-backgroud);
+  fill: var(--accent-backgroud);
 }
 
+/* .form-input:focus ~ .icon
+{   fill: var(--acсent-backgroud);
+    border-color: var(--acсent-backgroud);
+} */
 .form-label {
   display: flex;
   flex-direction: column;
@@ -332,7 +320,7 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 .form-textarea:hover {
-  border-color: var(--acсent-backgroud);
+  border-color: var(--accent-backgroud);
 }
 
 .icon {
@@ -341,15 +329,12 @@ body {
   left: 12px;
   transform: translateY(-50%);
 }
+
 .form-container:focus-within > .icon {
-  fill: var(--acсent-backgroud);
-  border-color: var(--acсent-backgroud);
+  fill: var(--accent-backgroud);
+  border-color: var(--accent-backgroud);
 }
 
-/* .form-input:focus ~ .icon
-{   fill: var(--acсent-backgroud);
-    border-color: var(--acсent-backgroud);
-} */
 .form-button {
   display: block;
   margin: 0px auto;
@@ -390,15 +375,15 @@ body {
   margin-right: 7px;
 }
 .check-inp:checked + .check-icon {
-  border: var(--acсent-backgroud);
-  background-color: var(--acсent-backgroud);
+  border: var(--accent-backgroud);
+  background-color: var(--accent-backgroud);
   background-image: url(../images/iconcheck.svg);
   background-size: contain;
   background-origin: border-box;
 }
 
 .dogovor-accent {
-  color: var(--acсent-backgroud);
+  color: var(--accent-backgroud);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -408,14 +393,12 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
-  outline: 5px solid teal;
 }
 
-/* короб для лого та кроба с навигацией та контактами */
+/* короб для лого та кoроба с навигацией та контактами */
 .header__container {
   display: flex;
   align-items: center;
-  outline: 2px solid tomato;
 }
 
 /* короб для ссылок с навигацией по сайту  */
@@ -425,12 +408,16 @@ body {
 }
 
 /* короб для телеф та емайла */
-.header-conect {
+.header__connect {
   margin-left: auto;
 }
 
+.header__logo {
+  margin-right: 93px;
+}
+
 /*  элементы навигации по сайту /сайт портфолио контакты */
-.nav {
+.navigation {
   gap: 50px;
   font-weight: 500;
   font-size: 14px;
@@ -439,29 +426,29 @@ body {
   color: var(--secondary-text-color);
 }
 
-.nav-link {
+.navigation__link {
   transition: var(--timing-function);
 }
-.nav-link:hover, .nav-link:focus {
-  color: var(--acсent-backgroud);
+.navigation__link:hover, .navigation__link:focus {
+  color: var(--accent-backgroud);
 }
 
-.nav-item {
+.navigation__item {
   position: relative;
 }
-.nav-item::after {
+.navigation__item::after {
   position: absolute;
   left: 0px;
   top: 46px;
   content: "";
   width: 100%;
   height: 4px;
-  background: var(--acсent-backgroud);
+  background: var(--accent-backgroud);
   border-radius: 2px;
 }
 
 /* ========== номера телефона и емайла====== */
-.conect {
+.connect {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -470,15 +457,15 @@ body {
   fill: currentColor;
   transition: color var(--timing-function);
 }
-.conect:hover, .conect:focus {
-  color: var(--acсent-backgroud);
+.connect:hover, .connect:focus {
+  color: var(--accent-backgroud);
 }
 
-.conect-item {
+.connect__item {
   margin-right: 30px;
 }
 
-.conect-icon {
+.connect__icon {
   margin-right: 10px;
 }
 
@@ -494,7 +481,7 @@ body {
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -506,16 +493,16 @@ body {
   margin-bottom: 30px;
 }
 
-.hero-button {
+.hero__button {
   width: 216px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--accent-text);
-  background: var(--acсent-backgroud);
+  background: var(--accent-backgroud);
   border-radius: 4px;
-  border-color: var(--acсent-backgroud);
+  border-color: var(--accent-backgroud);
   padding: 10px 32px;
 }
 
@@ -523,17 +510,20 @@ body {
   gap: 30px;
 }
 
-.benefits-text {
-  font-weight: 400;
+.benefits__title {
+  font-weight: 700;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
 }
 
-.benefits-item {
+.benefits__item {
   width: 270px;
 }
-.benefits-item::before {
+.benefits__item::before {
   display: block;
   content: "";
   height: 120px;
@@ -542,6 +532,13 @@ body {
   background-position: center;
   background-color: var(--background-color);
   border-radius: 4px;
+}
+
+.benefits__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .icon-detail::before {
@@ -647,8 +644,8 @@ body {
   transition: color var(--timing-function), border-color var(--timing-function);
 }
 .client-link:hover, .client-link:focus {
-  border-color: var(--acсent-backgroud);
-  color: var(--acсent-backgroud);
+  border-color: var(--accent-backgroud);
+  color: var(--accent-backgroud);
 }
 
 .client-icon {
@@ -660,6 +657,8 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--secondary-background-color);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .container-foot {
@@ -671,12 +670,13 @@ body {
   display: block;
 }
 
-.footer-logo {
+.footer__logo {
   font-family: "Raleway";
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
+  width: 145px;
   margin-bottom: 20px;
   color: var(--accent-text);
 }
@@ -687,11 +687,9 @@ body {
 }
 
 .address-link {
-  font-weight: 400;
-  font-size: 14px;
+  font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  font-style: normal;
   color: var(--accent-text);
 }
 
@@ -699,6 +697,33 @@ body {
   display: block;
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.add-title,
+.subscribe-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--accent-text);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.soc-item {
+  color: var(--accent-text);
+}
+
+.soc-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: color var(--timing-function), background-color var(--timing-function);
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  /* на білом підсв синім   */
+  background-color: var(--acсent-backgroud);
+  color: var(--accent-text);
 }
 
 .add {
@@ -713,19 +738,18 @@ body {
 
 .subscribe-container {
   position: relative;
-  width: 570px;
   display: flex;
-  align-items: center;
+  width: 570px;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
 }
 
 /* поле для e-mail  */
 .subscribe-inp {
-  width: 358px;
   display: flex;
+  width: 358px;
   align-items: center;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -744,6 +768,7 @@ body {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
+  align-items: center;
   text-align: left;
   padding: 10px 28px;
   color: var(--accent-text);
@@ -773,7 +798,7 @@ body {
 }
 .button-potfolio:hover, .button-potfolio:focus {
   color: var(--accent-text);
-  background-color: var(--acсent-backgroud);
+  background-color: var(--accent-backgroud);
 }
 
 .btn-item {

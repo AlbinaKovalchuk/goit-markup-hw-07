@@ -3,41 +3,45 @@
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
-  outline: 5px solid teal
 }
 
-/* короб для лого та кроба с навигацией та контактами */
+/* короб для лого та кoроба с навигацией та контактами */
 .header__container {
-  @include align-center ();
-  outline: 2px solid tomato
+  @include align-center();
 }
 
 /* короб для ссылок с навигацией по сайту  */
-.navigation{
-  @include align-center ();
+.navigation {
+  @include align-center();
 }
 
 /* короб для телеф та емайла */
-.header-conect {
+.header__connect {
   margin-left: auto;
+  
+}
+
+// відступ від лого, який є тільки в header
+.header__logo {
+  margin-right: 93px;
 }
 
 /*  элементы навигации по сайту /сайт портфолио контакты */
-.nav {
+.navigation {
   gap: 50px;
-  @include font(500, 14px,1.14,0.02em);
+  @include font(500, 14px, 1.14, 0.02em);
   color: var(--secondary-text-color);
 }
 
-.nav-link {
+.navigation__link {
   transition: var(--timing-function);
   &:hover,
   &:focus {
-    color: var(--acсent-backgroud);
+    color: var(--accent-backgroud);
   }
 }
 
-.nav-item {
+.navigation__item {
   position: relative;
   &::after {
     position: absolute;
@@ -46,27 +50,27 @@
     content: '';
     width: 100%;
     height: 4px;
-    background: var(--acсent-backgroud);
+    background: var(--accent-backgroud);
     border-radius: 2px;
   }
 }
 
 /* ========== номера телефона и емайла====== */
-.conect {
-  @include font(500, 14px,1.14,0.02em);
+.connect {
+  @include font(500, 14px, 1.14, 0.02em);
   color: var(--primary-text-color);
   fill: currentColor;
   transition: color var(--timing-function);
   &:hover,
   &:focus {
-    color: var(--acсent-backgroud);
+    color: var(--accent-backgroud);
   }
 }
 
-.conect-item {
+.connect__item {
   margin-right: 30px;
 }
 
-.conect-icon {
+.connect__icon {
   margin-right: 10px;
 }
