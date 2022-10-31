@@ -1,9 +1,9 @@
-.client.list {
+.client {
   justify-content: space-between;
   text-align: center;
 }
 
-.client-link {
+.client__link {
   width: 170px;
   height: 92px;
   @include align-center ();
@@ -19,6 +19,6 @@
   }
 }
 
-.client-icon {
+.client__icon {
   fill: currentColor;
 }

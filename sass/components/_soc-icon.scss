@@ -5,7 +5,7 @@
   gap: 10px;
 }
 
-.soc-link {
+.soc__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -23,6 +23,10 @@
   }
 }
 
-.soc-item {
+.soc__item {
   color: var(--accent-text);
+}
+
+.team__soc__item {
+  color: #afb1b8;
 }

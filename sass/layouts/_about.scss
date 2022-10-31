@@ -3,11 +3,11 @@
   gap: 30px;
 }
 
-.about-item {
+.about__item {
   position: relative;
 }
 
-.about-box {
+.about__box {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -18,7 +18,7 @@
   padding: 27px;
 }
 
-.about-text {
+.about__text {
   @include font(700,14px,1.14,0.03em);
   text-transform: uppercase;
   color: var(--accent-text);
