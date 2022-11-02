@@ -98,7 +98,8 @@
     color: var(--accent-text);
     background: var(--accent-backgroud);
     border-radius: 4px;
-    border-color: var(--accent-backgroud);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color:transparent;
 }
 
 .icon-send {
